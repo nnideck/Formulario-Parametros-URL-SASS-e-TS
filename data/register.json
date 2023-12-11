@@ -1,0 +1,120 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "João",
+      "sobrenome": "Neves",
+      "email": "email@email.com",
+      "nascimento": "1990-01-01",
+      "cpf": "000.000.000-00",
+      "celular": "(00) 00000-0000",
+      "sexo": "M",
+      "receber_ofertas": true,
+      "interesses": [1, 2, 3],
+      "foto": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "sobrenome": "Neves",
+      "email": "email@email.com",
+      "nascimento": "1990-01-01",
+      "cpf": "000.000.000-00",
+      "celular": "(00) 00000-0000",
+      "sexo": "M",
+      "receber_ofertas": true,
+      "interesses": [1, 2, 3],
+      "foto": "https://via.placeholder.com/150"
+    }
+  ],
+  "enderecos": [
+    {
+      "id": 1,
+      "nome": "Casa",
+      "rua": "Rua 1",
+      "numero": "1",
+      "complemento": "Casa",
+      "bairro": "Bairro 1",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "00000-000",
+      "usuarios_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Trabalho",
+      "rua": "Rua 2",
+      "numero": "2",
+      "complemento": "Casa",
+      "bairro": "Bairro 2",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "00000-000",
+      "usuarios_id": 1
+    }
+  ],
+  "documentos": [
+    {
+      "id": 1,
+      "nome": "RG",
+      "arquivo": "https://via.placeholder.com/150",
+      "usuarios_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "CPF",
+      "arquivo": "https://via.placeholder.com/150",
+      "usuarios_id": 1
+    }
+  ],
+  "departamentos": [
+    {
+      "id": 1,
+      "nome": "Telefonia"
+    },
+    {
+      "id": 2,
+      "nome": "Informática"
+    },
+    {
+      "id": 3,
+      "nome": "Eletrodomésticos"
+    },
+    {
+      "id": 4,
+      "nome": "Móveis"
+    },
+    {
+      "id": 5,
+      "nome": "Decoração"
+    },
+    {
+      "id": 6,
+      "nome": "Esporte e Lazer"
+    },
+    {
+      "id": 7,
+      "nome": "Games"
+    },
+    {
+      "id": 8,
+      "nome": "Livros"
+    },
+    {
+      "id": 9,
+      "nome": "Beleza e Saúde"
+    },
+    {
+      "id": 10,
+      "nome": "Moda"
+    },
+    {
+      "id": 11,
+      "nome": "Tv e Vídeo"
+    },
+    {
+      "id": 12,
+      "nome": "Serviços"
+    }
+  ]
+}
