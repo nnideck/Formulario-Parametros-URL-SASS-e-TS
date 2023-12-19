@@ -8,17 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const tbody = document.querySelector(".tbody_list");
-let departs = "";
-let users = "";
-function fillDeparts() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const resp = yield fetch("http://127.0.0.1:3500/departamentos");
-        const departList = yield resp.json();
-        departs = departList;
-        console.log(departs);
-    });
+const modal = document.querySelector(".box_1");
+function closeModal() {
+    const button = document.querySelector(".btn_modal_cancel");
+    button.onclick = () => {
+        modal.close();
+    };
 }
-fillDeparts();
+closeModal();
+let users = "";
 function getUsers() {
     return __awaiter(this, void 0, void 0, function* () {
         const resp = yield fetch("http://127.0.0.1:3500/usuarios");
@@ -37,6 +35,14 @@ function getUsers() {
   </td>`;
             tr.innerHTML = th;
             tbody === null || tbody === void 0 ? void 0 : tbody.appendChild(tr);
+            const btnDelete = tr.querySelector(".btn-dlt");
+            if (btnDelete) {
+                btnDelete.onclick = () => {
+                    let modalText = document.querySelector(".modal-body");
+                    modalText.textContent = `Are you sure you want to delete ${user.nome}?`;
+                    modal.showModal();
+                };
+            }
         });
     });
 }

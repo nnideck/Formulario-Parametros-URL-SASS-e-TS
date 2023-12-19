@@ -16,7 +16,33 @@ export interface Iusuario {
           cpf: number,
           celular: number,
           sexo: string,
+          foto: string
+          documentos?: Idocuments
+          notas: string
           receber_ofertas: string,
           interesses: number[],
-          foto: string
+        
 }
+
+export interface Idocuments 
+{
+  id: number,
+  nome: string,
+  arquivo: string,
+  usuarios_id: number
+}
+
+export interface Iadress 
+{
+  id: number,
+  nome: string,
+  rua: string,
+  numero: number,
+  complemento: string,
+  bairro: string,
+  cidade: string,
+  estado: string,
+  cep: number,
+  usuarios_id: number
+}
+

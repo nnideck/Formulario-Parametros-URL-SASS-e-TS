@@ -20,31 +20,32 @@
     <script src="dist/main.js" type="module"></script>
   </head>
   <body>
-    <h1>USER LIST</h1>
-    <button type="button" class="btn btn-primary btn-sm btn-color">
-      <a href="form.html">ADD</a>
-    </button>
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Photo</th>
-          <th scope="col">Name</th>
-          <th scope="col">CPF</th>
-          <th scope="col">Genre</th>
-          <th scope="col">E-mail</th>
-          <th scope="col">Actions</th>
-        </tr>
-      </thead>
-      <tbody class="tbody_list">
-        <tr class="user_tr">
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <!--  
+    <div class="div_main">
+      <h1>USER LIST</h1>
+      <button type="button" class="btn btn-primary btn-sm btn-color">
+        <a href="form.html">ADD</a>
+      </button>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Name</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Genre</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody_list">
+          <tr class="user_tr">
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+          </tr>
+          <!--  
         <tr>
           <td>Jacob</td>
           <td>Thornton</td>
@@ -53,7 +54,27 @@
           <td>@mdo</td>
           <td>@mdo</td>
         </tr> -->
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+      <dialog class="box_1">
+        <div class="modal-content modal_div_1">
+          <p class="modal-body"></p>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm btn-color btn-dlt btn_modal_cancel"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm btn-color btn-edt"
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      </dialog>
+    </div>
   </body>
 </html>

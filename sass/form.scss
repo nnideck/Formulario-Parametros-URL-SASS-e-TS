@@ -39,7 +39,7 @@ body {
 
   .back_button {
     width: 60px;
-    background-color: #d6ccc2;
+    background-color: #51516e;
     border: none;
   }
 
@@ -49,3 +49,9 @@ body {
     margin-top: 20px;
   }
 
+  .btn-primary {
+    --bs-btn-hover-color: black;
+    --bs-btn-hover-bg: #3f3f6e67;
+    --bs-btn-hover-border-color:#3f3f6e67
+
+  }

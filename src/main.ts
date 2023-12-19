@@ -1,17 +1,16 @@
 import { Idepartamentos, Iusuario } from "./types";
 
 const tbody = document.querySelector(".tbody_list")
+const modal = document.querySelector(".box_1") as HTMLDialogElement;
 
-let departs: Idepartamentos[] = ""
+function closeModal () {
+const button = document.querySelector(".btn_modal_cancel") as HTMLButtonElement
+button.onclick = () => {
+  modal.close()
+}}
+closeModal ()
+
 let users: Iusuario[] = ""
-
-async function fillDeparts (){
-  const resp = await fetch("http://127.0.0.1:3500/departamentos")
-  const departList = await resp.json()
-  departs = departList
-  console.log(departs)
-}  
-fillDeparts ()
 
 
 async function getUsers() {
@@ -30,12 +29,18 @@ users.forEach(user => {
   <button type="button" class="btn btn-primary btn-sm btn-edt">EDIT</button>
   <button type="button" class="btn btn-primary btn-sm btn-dlt">DELETE</button>
   </td>`
- 
 tr.innerHTML = th;
 tbody?.appendChild (tr)
 
+const btnDelete = tr.querySelector(".btn-dlt") as HTMLButtonElement;
+if (btnDelete){
+  btnDelete.onclick = () => {
+    let modalText = document.querySelector(".modal-body")
+    modalText!.textContent = `Are you sure you want to delete ${user.nome}?`
+    modal.showModal();
+  }
+}
 });
 
-  
 }
 getUsers()
