@@ -16,13 +16,13 @@ function closeModal() {
     };
 }
 closeModal();
-let users = "";
+let users = [];
 function getUsers() {
     return __awaiter(this, void 0, void 0, function* () {
         const resp = yield fetch("http://127.0.0.1:3500/usuarios");
         const usersList = yield resp.json();
         users = usersList;
-        users.forEach(user => {
+        users.forEach((user) => {
             const tr = document.createElement("tr");
             const th = ` <td><a href="user.html?id=${user.id}"><img src="${user.foto}"></a></td>
   <td><a href="user.html?id=${user.id}">${user.nome} ${user.sobrenome}</a></td>

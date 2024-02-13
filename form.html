@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>USER DETAIL</title>
+    <title>USER FORM</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,61 +17,91 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/form.css" />
-    <script src="dist/form.js" type="module"></script>
+    <script src="dist/form.js" type="module" defer></script>
   </head>
   <body>
     <h2>NEW USER</h2>
-    <form>
-      <div class="row mb-3">
+    <form method="post" onsubmit="()=>false">
+      <div class="row mb-2">
         <label for="inputName" class="col-sm-2 col-form-label"
           >Name<span>*</span></label
         >
         <div class="col-sm-10">
-          <input type="text" required class="form-control" id="inputName" />
+          <input
+            type="text"
+            required
+            class="form-control"
+            id="inputName"
+            name="names"
+          />
+          <small></small>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputSurname" class="col-sm-2 col-form-label"
           >Surname<span>*</span></label
         >
         <div class="col-sm-10">
-          <input type="text" required class="form-control" id="inputSurname" />
+          <input
+            type="text"
+            required
+            class="form-control"
+            id="inputSurname"
+            name="surname"
+          />
+          <small></small>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputEmail" class="col-sm-2 col-form-label"
           >E-mail<span>*</span></label
         >
         <div class="col-sm-10">
-          <input type="text" required class="form-control" id="inputEmail" />
+          <input
+            type="text"
+            required
+            class="form-control"
+            id="inputEmail"
+            name="email"
+          />
+          <small></small>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputBirth" class="col-sm-2 col-form-label"
           >Birth<span>*</span></label
         >
         <div class="col-sm-10">
-          <input type="date" required class="form-control" id="inputBirth" />
+          <input
+            type="date"
+            required
+            class="form-control"
+            id="inputBirth"
+            name="birth"
+          />
+          <small></small>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputCPF" class="col-sm-2 col-form-label"
           >CPF<span>*</span></label
         >
         <div class="col-sm-10">
           <input type="text" required class="form-control" id="inputCPF" />
+          <small>Error</small>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputPhone" class="col-sm-2 col-form-label"
           >Cellphone number<span>*</span></label
         >
-        <div class="col-sm-10">
+        <div class="col-sm-10 cell_div">
           <input type="text" required class="form-control" id="inputPhone" />
+          <small>Error</small>
         </div>
       </div>
 
-      <fieldset class="row mb-3">
+      <fieldset class="row mb-2">
         <legend class="col-form-label col-sm-2 pt-0">
           Genre<span>*</span>
         </legend>
@@ -94,19 +124,21 @@
             />
             <label class="form-check-label" for="inputMale"> Male </label>
           </div>
+          <small>Error</small>
         </div>
       </fieldset>
 
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputPhoto" class="col-sm-2 col-form-label"
           >Photo<span>*</span></label
         >
         <div class="col-sm-10">
           <input type="file" required class="form-control" id="inputPhoto" />
+          <small>Error</small>
         </div>
       </div>
 
-      <div class="row mb-3">
+      <div class="row mb-2">
         <label for="inputFile" class="col-sm-2 col-form-label"
           >Docs<span>*</span></label
         >
@@ -118,13 +150,12 @@
             id="inputFile"
             multiple
           />
+          <small>Error</small>
         </div>
       </div>
 
-      <div class="row mb-3">
-        <label for="inputText" class="col-sm-2 col-form-label"
-          >Notes<span>*</span></label
-        >
+      <div class="row mb-2">
+        <label for="inputText" class="col-sm-2 col-form-label">Notes</label>
         <div class="col-sm-10">
           <input
             type="text"
@@ -136,7 +167,7 @@
         </div>
       </div>
 
-      <div class="row mb-3">
+      <div class="row mb-2">
         <div class="col-sm-10">
           <input class="form-check-input" type="checkbox" id="newsletters" />
           <label class="form-check-label" for="newsletters">
@@ -144,7 +175,7 @@
           </label>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-2">
         <legend class="col-form-label col-sm-2 pt-0">Interests</legend>
         <div class="col-sm-10 offset-sm-2 departs">
           <!--   <div>
@@ -159,7 +190,7 @@
       </div>
     </form>
     <div class="div_buttons row">
-      <button type="submit" class="btn btn-primary sub_button">
+      <button type="button" class="btn btn-primary sub_button">
         Subscribe
       </button>
       <button
